@@ -7,6 +7,7 @@ import light from "./styles/themes/light";
 import dark from "./styles/themes/dark";
 
 import Header from "./components/Header";
+import Card from "./components/Card";
 
 import { LIGHT } from "./constants/theme";
 import { THEME } from "./constants/localStorage";
@@ -22,6 +23,7 @@ function App() {
       <div className="App">
         <GlobalStyle />
         <Header toggleTheme={toggleTheme} />
+        <Card />
       </div>
     </ThemeProvider>
   );
