@@ -15,7 +15,14 @@ const Header: React.FC<Props> = ({ toggleTheme }) => {
 
   return (
     <Container>
-      React Switch Theme
+      <p>
+        React Switch Theme
+        <span role="img" aria-label="ovelha">
+          {" "}
+          🌗
+        </span>
+      </p>
+
       <Switch
         onChange={toggleTheme}
         checked={title === DARK}

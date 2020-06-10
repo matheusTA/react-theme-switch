@@ -10,4 +10,6 @@ export const Container = styled.div`
   padding: 0 100px;
   font-weight: bold;
   font-size: 1.5rem;
+
+  margin-bottom: 50px;
 `;
