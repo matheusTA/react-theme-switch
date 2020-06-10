@@ -1,5 +1,7 @@
+import { LIGHT } from "../../constants/theme";
+
 export default {
-  title: "light",
+  title: LIGHT,
 
   colors: {
     primary: "#c62e65",

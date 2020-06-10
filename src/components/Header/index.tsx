@@ -4,6 +4,7 @@ import { ThemeContext } from "styled-components";
 import { shade } from "polished";
 
 import { Container } from "./styles";
+import { DARK } from "../../constants/theme";
 
 interface Props {
   toggleTheme(): void;
@@ -14,10 +15,10 @@ const Header: React.FC<Props> = ({ toggleTheme }) => {
 
   return (
     <Container>
-      Hello world
+      React Switch Theme
       <Switch
         onChange={toggleTheme}
-        checked={title === "dark"}
+        checked={title === DARK}
         checkedIcon={false}
         uncheckedIcon={false}
         height={10}

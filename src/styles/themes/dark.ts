@@ -1,5 +1,7 @@
+import { DARK } from "../../constants/theme";
+
 export default {
-  title: "dark",
+  title: DARK,
 
   colors: {
     primary: "#333",

@@ -8,11 +8,14 @@ import dark from "./styles/themes/dark";
 
 import Header from "./components/Header";
 
+import { LIGHT } from "./constants/theme";
+import { THEME } from "./constants/localStorage";
+
 function App() {
-  const [theme, setTheme] = usePersistedState<DefaultTheme>("theme", light);
+  const [theme, setTheme] = usePersistedState<DefaultTheme>(THEME, light);
 
   const toggleTheme = () => {
-    setTheme(theme.title === "light" ? dark : light);
+    setTheme(theme.title === LIGHT ? dark : light);
   };
   return (
     <ThemeProvider theme={theme}>
