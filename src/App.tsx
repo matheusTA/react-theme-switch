@@ -1,31 +1,28 @@
 import React from "react";
-import { ThemeProvider, DefaultTheme } from "styled-components";
-import usePersistedState from "./hooks/usePersistedState";
+import { ThemeProvider } from "styled-components";
 
 import GlobalStyle from "./styles/global";
-import light from "./styles/themes/light";
-import dark from "./styles/themes/dark";
 
 import Header from "./components/Header";
 import Card from "./components/Card";
 
-import { LIGHT } from "./constants/theme";
-import { THEME } from "./constants/localStorage";
+import { ThemeContextProvider } from "./context/toggleTheme";
+import useToggleTheme from "./hooks/useToggleTheme";
+import light from "./styles/themes/light";
 
 function App() {
-  const [theme, setTheme] = usePersistedState<DefaultTheme>(THEME, light);
+  const { theme } = useToggleTheme();
 
-  const toggleTheme = () => {
-    setTheme(theme.title === LIGHT ? dark : light);
-  };
   return (
-    <ThemeProvider theme={theme}>
-      <div className="App">
-        <GlobalStyle />
-        <Header toggleTheme={toggleTheme} />
-        <Card />
-      </div>
-    </ThemeProvider>
+    <ThemeContextProvider>
+      <ThemeProvider theme={theme ? theme : light}>
+        <div className="App">
+          <GlobalStyle />
+          <Header />
+          <Card />
+        </div>
+      </ThemeProvider>
+    </ThemeContextProvider>
   );
 }
 
