@@ -16,6 +16,7 @@
 
 - [ReactJS](https://pt-br.reactjs.org/)
 - [React-hooks](https://pt-br.reactjs.org/docs/hooks-custom.html)
+- [React-Context](https://pt-br.reactjs.org/docs/context.html)
 - [Styled-Components](https://styled-components.com/)
 
 ## 👩‍🏫 Getting Started
