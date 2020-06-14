@@ -24,7 +24,7 @@ const ThemeContextProvider: React.FC = ({ children }) => {
   function toggleTheme() {
     setTheme(theme.title === LIGHT ? dark : light);
   }
-  console.log("##", theme);
+
   return (
     <ThemeContext.Provider value={{ toggleTheme, theme }}>
       {children}
