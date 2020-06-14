@@ -5,13 +5,11 @@ import { shade } from "polished";
 
 import { Container } from "./styles";
 import { DARK } from "../../constants/theme";
+import useToggleTheme from "../../hooks/useToggleTheme";
 
-interface Props {
-  toggleTheme(): void;
-}
-
-const Header: React.FC<Props> = ({ toggleTheme }) => {
+const Header: React.FC = () => {
   const { colors, title } = useContext(ThemeContext);
+  const { toggleTheme } = useToggleTheme();
 
   return (
     <Container>
