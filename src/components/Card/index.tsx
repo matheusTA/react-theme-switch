@@ -11,19 +11,9 @@ const Card: React.FC = () => {
     <Container>
       <h1>
         Hello World!
-        {title === DARK ? (
           <span role="img" aria-label="ovelha">
-            {" "}
-            🌚
+            {title === DARK ? 🌚 : 🌝 } 
           </span>
-        ) : (
-          <span role="img" aria-label="ovelha">
-            {" "}
-            🌝
-          </span>
-        )}
-      </h1>
-
       <p>
         Lorem Ipsum is simply dummy text of the printing and typesetting
         industry. Lorem Ipsum has been the industry's standard dummy text ever
